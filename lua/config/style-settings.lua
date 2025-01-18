@@ -1,5 +1,5 @@
 local style_group = vim.api.nvim_create_augroup("stylesettings", { clear = true })
-local file_patterns = { "markdown", "tex", "cpp", "java", "rust" }
+local file_patterns = { "cpp", "java", "lua", "markdown", "rust", "tex" }
 
 -- Helper functions
 local function setup_filetype_width(file_pattern, augroup)
