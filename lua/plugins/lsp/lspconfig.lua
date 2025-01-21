@@ -139,6 +139,9 @@ return {
                     "typescript",
                 },
             })
+
+            lspconfig.angularls.setup({})
+            lspconfig.ts_ls.setup({})
         end
     },
 }
