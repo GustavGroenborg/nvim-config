@@ -118,6 +118,27 @@ return {
                 end,
             })
             lspconfig.rust_analyzer.setup({})
+
+            require("sonarlint").setup({
+                -- See repository for guide to setup rules
+                server = {
+                    cmd = {
+                        "sonarlint-language-server",
+                        "-stdio",
+                        "-analyzers",
+                        vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarcfamily.jar"),
+                        vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarjava.jar"),
+                        vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarhtml.jar"),
+                        vim.fn.expand("$MASON/share/sonarlint-analyzers/sonarjs.jar"),
+                    },
+                },
+                filetypes = {
+                    "cpp",
+                    "java",
+                    "html",
+                    "typescript",
+                },
+            })
         end
     },
 }

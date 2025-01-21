@@ -18,6 +18,9 @@ return {
             )
         end
     },
+    { -- SonarLint
+        url = "https://gitlab.com/schrieveslaach/sonarlint.nvim",
+    },
     {
         "saghen/blink.cmp",
         version = "*",
