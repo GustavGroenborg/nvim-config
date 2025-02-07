@@ -11,6 +11,9 @@ return {
                 -- Rember to escape backslashses with a backslash
                 custom = { "^.*\\~$" },
             },
+            renderer = {
+                group_empty = true
+            },
         })
     end,
 }
